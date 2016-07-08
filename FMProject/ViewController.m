@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HTFMViewController.h"
 
 @interface ViewController ()
 
@@ -24,4 +25,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonClick:(UIButton *)sender {
+    
+    HTFMViewController * htFMVC = [[HTFMViewController alloc] init];
+    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController pushViewController:htFMVC animated:YES];
+}
 @end
